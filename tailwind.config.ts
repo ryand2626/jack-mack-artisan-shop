@@ -63,12 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Jack Mack Woodturning Brand Colors
-				wood: {
-					chestnut: '#5d3b26',
-					hickory: '#8b5a38',
-					birch: '#f7f3ef',
-					charcoal: '#2e2721'
+				// Jack Mack Woodturning Green Nature Theme
+				nature: {
+					forest: '#2d4a36',
+					moss: '#487a54',
+					sage: '#f3f7f4',
+					charcoal: '#1a1f1c'
 				}
 			},
 			borderRadius: {

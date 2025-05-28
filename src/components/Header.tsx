@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-wood-birch/95 backdrop-blur-sm border-b border-wood-hickory/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-nature-sage/95 backdrop-blur-sm border-b border-nature-moss/20">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -33,7 +33,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-wood-charcoal hover:text-wood-hickory transition-colors duration-200 font-medium"
+                className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -44,7 +44,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-wood-charcoal hover:text-wood-hickory"
+            className="md:hidden text-nature-charcoal hover:text-nature-moss"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -53,13 +53,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-wood-hickory/20 pt-4">
+          <nav className="md:hidden mt-4 pb-4 border-t border-nature-moss/20 pt-4">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-wood-charcoal hover:text-wood-hickory transition-colors duration-200 font-medium"
+                  className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

@@ -55,13 +55,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 wood-grain-bg">
+    <section id="contact" className="py-20 nature-grain-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-playfair font-bold text-wood-chestnut mb-4">
+          <h2 className="text-4xl font-playfair font-bold text-nature-forest mb-4">
             Get in Touch
           </h2>
-          <p className="text-xl text-wood-charcoal/70 max-w-2xl mx-auto">
+          <p className="text-xl text-nature-charcoal/70 max-w-2xl mx-auto">
             Have a custom piece in mind? Questions about our craftsmanship? 
             We'd love to hear from you.
           </p>
@@ -70,26 +70,26 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-playfair font-semibold text-wood-chestnut mb-8">
+            <h3 className="text-2xl font-playfair font-semibold text-nature-forest mb-8">
               Let's Start a Conversation
             </h3>
             
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="border-wood-hickory/20 bg-wood-birch/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+                <Card key={index} className="border-nature-moss/20 bg-nature-sage/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="text-wood-hickory mt-1">
+                      <div className="text-nature-moss mt-1">
                         {info.icon}
                       </div>
                       <div>
-                        <h4 className="font-semibold text-wood-chestnut mb-1">
+                        <h4 className="font-semibold text-nature-forest mb-1">
                           {info.title}
                         </h4>
-                        <p className="text-wood-charcoal font-medium mb-1">
+                        <p className="text-nature-charcoal font-medium mb-1">
                           {info.content}
                         </p>
-                        <p className="text-wood-charcoal/60 text-sm">
+                        <p className="text-nature-charcoal/60 text-sm">
                           {info.subtitle}
                         </p>
                       </div>
@@ -99,11 +99,11 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="bg-wood-chestnut/10 rounded-xl p-6 border border-wood-hickory/20">
-              <h4 className="font-playfair font-semibold text-wood-chestnut mb-3">
+            <div className="bg-nature-forest/10 rounded-xl p-6 border border-nature-moss/20">
+              <h4 className="font-playfair font-semibold text-nature-forest mb-3">
                 Custom Commissions Welcome
               </h4>
-              <p className="text-wood-charcoal/70 leading-relaxed">
+              <p className="text-nature-charcoal/70 leading-relaxed">
                 Each custom piece is a collaboration between your vision and our craftsmanship. 
                 We work closely with you to create something truly unique that fits your space and style perfectly.
               </p>
@@ -112,16 +112,16 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <Card className="border-wood-hickory/20 bg-wood-birch shadow-xl">
+            <Card className="border-nature-moss/20 bg-nature-sage shadow-xl">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-playfair font-semibold text-wood-chestnut mb-6">
+                <h3 className="text-2xl font-playfair font-semibold text-nature-forest mb-6">
                   Send us a Message
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-wood-charcoal font-medium mb-2">
+                      <label htmlFor="name" className="block text-nature-charcoal font-medium mb-2">
                         Full Name
                       </label>
                       <Input
@@ -129,13 +129,13 @@ const Contact = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="border-wood-hickory/30 focus:border-wood-hickory bg-wood-birch"
+                        className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage"
                         placeholder="Your name"
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-wood-charcoal font-medium mb-2">
+                      <label htmlFor="email" className="block text-nature-charcoal font-medium mb-2">
                         Email Address
                       </label>
                       <Input
@@ -144,7 +144,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="border-wood-hickory/30 focus:border-wood-hickory bg-wood-birch"
+                        className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage"
                         placeholder="your.email@example.com"
                         required
                       />
@@ -152,7 +152,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-wood-charcoal font-medium mb-2">
+                    <label htmlFor="subject" className="block text-nature-charcoal font-medium mb-2">
                       Subject
                     </label>
                     <Input
@@ -160,14 +160,14 @@ const Contact = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="border-wood-hickory/30 focus:border-wood-hickory bg-wood-birch"
+                      className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage"
                       placeholder="What can we help you with?"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-wood-charcoal font-medium mb-2">
+                    <label htmlFor="message" className="block text-nature-charcoal font-medium mb-2">
                       Message
                     </label>
                     <Textarea
@@ -176,7 +176,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="border-wood-hickory/30 focus:border-wood-hickory bg-wood-birch resize-none"
+                      className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage resize-none"
                       placeholder="Tell us about your project or ask us anything..."
                       required
                     />
@@ -185,7 +185,7 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full bg-wood-hickory hover:bg-wood-chestnut text-wood-birch font-medium py-3 rounded-xl transition-all duration-300"
+                    className="w-full bg-nature-moss hover:bg-nature-forest text-nature-sage font-medium py-3 rounded-xl transition-all duration-300"
                   >
                     Send Message
                   </Button>
