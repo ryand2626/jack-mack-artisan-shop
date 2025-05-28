@@ -12,7 +12,6 @@ const Header = () => {
     { name: 'One-Off Art', href: '/one-off-art' },
     { name: 'Kitchenware', href: '/kitchenware' },
     { name: 'Finishing Products', href: '/finishing-products' },
-    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -26,7 +25,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/695ffc1a-cc81-412f-9df5-d02cd08750d3.png" 
                 alt="Jack Mack Woodturning" 
-                className="h-24 w-auto"
+                className="h-48 w-auto"
               />
             </Link>
           </div>
