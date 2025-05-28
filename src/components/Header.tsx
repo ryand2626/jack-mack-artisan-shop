@@ -18,9 +18,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-nature-sage/95 backdrop-blur-sm border-b border-nature-moss/20">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo placeholder - ready for new logo */}
+          {/* Logo */}
           <div className="flex items-center space-x-3">
-            {/* Logo will be added here */}
+            <img 
+              src="/lovable-uploads/88023112-64d7-4b47-b412-b64c629a5fd4.png" 
+              alt="Jack Mack Woodturning" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
