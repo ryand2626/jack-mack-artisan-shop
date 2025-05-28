@@ -25,7 +25,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/8509c152-cdb4-4f26-856a-dafd7addca55.png" 
                 alt="Jack Mack Woodturning" 
-                className="h-48 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
           </div>
