@@ -20,11 +20,13 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/695ffc1a-cc81-412f-9df5-d02cd08750d3.png" 
-              alt="Jack Mack Woodturning" 
-              className="h-36 w-auto"
-            />
+            <div className="h-16 w-auto overflow-hidden">
+              <img 
+                src="/lovable-uploads/695ffc1a-cc81-412f-9df5-d02cd08750d3.png" 
+                alt="Jack Mack Woodturning" 
+                className="h-36 w-auto object-cover object-center"
+              />
+            </div>
           </div>
 
           {/* Desktop Navigation */}
