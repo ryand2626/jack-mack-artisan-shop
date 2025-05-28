@@ -1,22 +1,40 @@
 
 import { ArrowRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section id="home" className="pt-24 pb-16 relative overflow-hidden">
+    <section id="home" className="pt-24 pb-16 relative overflow-hidden h-screen">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div 
+        className="absolute inset-0"
+        style={{
+          transform: `translateY(${scrollY * 0.5}px)`,
+        }}
+      >
         <img 
           src="/lovable-uploads/2af935d2-551b-49c5-b4f7-73d0dbb25d38.png" 
           alt="Wood stack background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-nature-sage/75"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div 
+        className="container mx-auto px-4 relative z-10 h-full flex items-center"
+        style={{
+          transform: `translateY(${scrollY * -0.3}px)`,
+        }}
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Column - Text Content */}
           <div className="animate-fade-in">
             <div className="flex items-center space-x-2 mb-6">
@@ -25,15 +43,15 @@ const Hero = () => {
                   <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
                 ))}
               </div>
-              <span className="text-nature-charcoal/70 font-medium">Handcrafted Excellence</span>
+              <span className="text-white font-medium drop-shadow-lg">Handcrafted Excellence</span>
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-playfair font-bold text-nature-forest mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-playfair font-bold text-white mb-6 leading-tight drop-shadow-lg">
               Artisan
-              <span className="block text-nature-moss">Woodturning</span>
+              <span className="block text-white">Woodturning</span>
             </h1>
             
-            <p className="text-xl text-nature-charcoal/80 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed drop-shadow-lg">
               Each piece is meticulously handcrafted from carefully selected wood, 
               creating unique artworks and functional pieces that bring natural 
               beauty into your home.
@@ -52,7 +70,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-nature-moss text-nature-moss hover:bg-nature-moss hover:text-nature-sage px-8 py-3 rounded-xl transition-all duration-300"
+                className="border-white text-white hover:bg-white hover:text-nature-forest px-8 py-3 rounded-xl transition-all duration-300"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Meet Jack
@@ -62,8 +80,8 @@ const Hero = () => {
 
           {/* Right Column - Featured Image */}
           <div className="relative animate-fade-in">
-            <div className="bg-gradient-to-br from-nature-moss/20 to-nature-forest/30 rounded-2xl p-8 shadow-2xl backdrop-blur-sm">
-              <div className="aspect-square bg-nature-sage/90 rounded-xl shadow-inner flex items-center justify-center">
+            <div className="bg-gradient-to-br from-white/20 to-white/30 rounded-2xl p-8 shadow-2xl backdrop-blur-sm">
+              <div className="aspect-square bg-white/90 rounded-xl shadow-inner flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-32 h-32 bg-nature-moss/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-4xl font-playfair text-nature-forest">JM</span>
