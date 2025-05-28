@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+import { Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -29,15 +29,9 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Phone",
-      content: "+44 (0) 123 456 7890",
-      subtitle: "Call for custom commissions"
-    },
-    {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      content: "hello@jackmackwoodturning.co.uk",
+      content: "info@jackmackwoodturning.com",
       subtitle: "We'll respond within 24 hours"
     },
     {

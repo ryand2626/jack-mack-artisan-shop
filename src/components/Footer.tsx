@@ -49,12 +49,8 @@ const Footer = () => {
             <h3 className="font-playfair font-semibold text-lg mb-6">Get in Touch</h3>
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-nature-sage/60" />
-                <span className="text-nature-sage/80">+44 (0) 123 456 7890</span>
-              </li>
-              <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-nature-sage/60" />
-                <span className="text-nature-sage/80">hello@jackmackwoodturning.co.uk</span>
+                <span className="text-nature-sage/80">info@jackmackwoodturning.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-nature-sage/60 mt-0.5" />
