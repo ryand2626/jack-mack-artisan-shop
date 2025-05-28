@@ -4,8 +4,18 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-24 pb-16 nature-grain-bg">
-      <div className="container mx-auto px-4">
+    <section id="home" className="pt-24 pb-16 nature-grain-bg relative overflow-hidden">
+      {/* Background Workshop Image */}
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src="/lovable-uploads/54c5f08a-ba4a-4be9-a112-1f629d1b3525.png" 
+          alt="Jack at work in his workshop" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-nature-sage/80"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="animate-fade-in">
@@ -50,19 +60,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Featured Image */}
+          {/* Right Column - Workshop Image Feature */}
           <div className="relative animate-fade-in">
             <div className="bg-gradient-to-br from-nature-moss/20 to-nature-forest/30 rounded-2xl p-8 shadow-2xl">
-              <div className="aspect-square bg-nature-sage rounded-xl shadow-inner flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 bg-nature-moss/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-4xl font-playfair text-nature-forest">JM</span>
-                  </div>
-                  <p className="text-nature-charcoal/60 italic">
-                    "Every piece tells a story of the wood's journey from tree to treasured artwork."
-                  </p>
-                  <p className="text-nature-moss font-medium mt-2">- Jack Mack</p>
-                </div>
+              <div className="aspect-square bg-nature-sage rounded-xl shadow-inner overflow-hidden">
+                <img 
+                  src="/lovable-uploads/54c5f08a-ba4a-4be9-a112-1f629d1b3525.png" 
+                  alt="Jack Mack at work in his woodturning workshop" 
+                  className="w-full h-full object-cover rounded-xl"
+                />
               </div>
             </div>
             
