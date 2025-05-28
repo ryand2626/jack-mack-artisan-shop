@@ -51,13 +51,13 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 nature-grain-bg relative overflow-hidden">
       {/* Background Workshop Image */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-20">
         <img 
           src="/lovable-uploads/54c5f08a-ba4a-4be9-a112-1f629d1b3525.png" 
           alt="Jack at work in his workshop" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-nature-sage/90"></div>
+        <div className="absolute inset-0 bg-nature-sage/70"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
