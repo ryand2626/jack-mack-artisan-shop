@@ -23,7 +23,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <Link to="/">
               <img 
-                src="/lovable-uploads/695ffc1a-cc81-412f-9df5-d02cd08750d3.png" 
+                src="/lovable-uploads/8509c152-cdb4-4f26-856a-dafd7addca55.png" 
                 alt="Jack Mack Woodturning" 
                 className="h-48 w-auto"
               />
