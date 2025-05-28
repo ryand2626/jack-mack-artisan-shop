@@ -1,4 +1,3 @@
-
 import { ArrowRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
@@ -81,16 +80,6 @@ const Hero = () => {
           {/* Right Column - Featured Image */}
           <div className="relative animate-fade-in">
             <div className="relative bg-gradient-to-br from-white/20 to-white/30 rounded-2xl p-8 shadow-2xl backdrop-blur-sm overflow-hidden">
-              {/* Woodturning background image */}
-              <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <img 
-                  src="/lovable-uploads/543cccf1-1936-4f02-b8a4-0944074e131d.png" 
-                  alt="Jack Mack woodturning" 
-                  className="w-full h-full object-cover opacity-30"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/40"></div>
-              </div>
-              
               <div className="relative z-10 aspect-square bg-white/90 rounded-xl shadow-inner flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-32 h-32 bg-nature-moss/20 rounded-full mx-auto mb-4 flex items-center justify-center">

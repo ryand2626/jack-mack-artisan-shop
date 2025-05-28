@@ -32,8 +32,18 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Image */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-nature-moss/30 to-nature-forest/40 rounded-2xl shadow-2xl flex items-center justify-center">
-              <div className="w-80 h-80 bg-nature-sage rounded-xl shadow-inner flex items-center justify-center">
+            <div className="relative aspect-square bg-gradient-to-br from-nature-moss/30 to-nature-forest/40 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
+              {/* Woodturning background image */}
+              <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/543cccf1-1936-4f02-b8a4-0944074e131d.png" 
+                  alt="Jack Mack woodturning" 
+                  className="w-full h-full object-cover opacity-30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-nature-moss/40 to-nature-forest/50"></div>
+              </div>
+              
+              <div className="relative z-10 w-80 h-80 bg-nature-sage/90 rounded-xl shadow-inner flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 bg-nature-moss rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
                     <span className="text-5xl font-playfair text-nature-sage font-bold">J</span>
