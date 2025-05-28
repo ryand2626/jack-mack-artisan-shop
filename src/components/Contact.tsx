@@ -1,4 +1,3 @@
-
 import { Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -51,7 +50,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 nature-grain-bg relative overflow-hidden">
       {/* Background Workshop Image */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-35">
         <img 
           src="/lovable-uploads/54c5f08a-ba4a-4be9-a112-1f629d1b3525.png" 
           alt="Jack at work in his workshop" 
