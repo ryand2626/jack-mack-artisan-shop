@@ -1,3 +1,4 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -56,12 +57,12 @@ const OneOffArt = () => {
               {artPieces.map((piece) => (
                 <Card key={piece.id} className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-nature-sage border-nature-moss/20 rounded-xl overflow-hidden">
                   <div className="relative">
-                    <div className={`h-64 flex items-center justify-center relative overflow-hidden ${piece.image.startsWith('bg-') ? piece.image : 'bg-white'}`}>
+                    <div className={`h-80 flex items-center justify-center relative overflow-hidden ${piece.image.startsWith('bg-') ? piece.image : 'bg-white'}`}>
                       {piece.image.startsWith('/') ? (
                         <img 
                           src={piece.image} 
                           alt={piece.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       ) : (
                         <>
