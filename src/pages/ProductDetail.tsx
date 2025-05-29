@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -34,7 +35,10 @@ const ProductDetail = () => {
       image: "/lovable-uploads/a5e75673-1dcf-492b-b253-772cc9469ef4.png",
       description: "An extraordinary bowl turned from rare pear wood burl, showcasing the dramatic swirling grain patterns and rich honey tones unique to burled wood. This natural edge piece celebrates the tree's natural form while creating a functional work of art.",
       dimensions: "25cm diameter x 12cm height",
-      finish: "Hand-rubbed natural oil finish"
+      artist: "Jack Mack",
+      materials: "Pear Wood Burl",
+      finishedPiece: "Natural edge decorative bowl",
+      note: "As a natural material, wood has the potential to change shape slightly depending on environmental conditions. Burled wood may show natural checking and movement over time, which adds to its unique character and beauty."
     },
     {
       id: 3,
@@ -45,7 +49,10 @@ const ProductDetail = () => {
       image: "/lovable-uploads/72c710c9-e20a-44b0-a63e-69f70440b92b.png",
       description: "A striking natural edge vessel turned from yew wood, featuring the distinctive purple heartwood streaks that give this piece its name. The dramatic coloration and natural defects create a cosmic appearance reminiscent of shooting stars.",
       dimensions: "20cm diameter x 15cm height",
-      finish: "Natural wax finish"
+      artist: "Jack Mack",
+      materials: "Yew Wood",
+      finishedPiece: "Natural edge decorative vessel",
+      note: "Yew wood contains natural toxins and should not be used for food contact. This piece is intended for decorative purposes only. As with all natural wood, some movement and color changes may occur over time."
     }
   ];
 
