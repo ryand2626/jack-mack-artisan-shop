@@ -10,11 +10,11 @@ const OneOffArt = () => {
   const artPieces = [
     {
       id: 1,
-      title: "Walnut Bowl Collection",
-      price: "£180",
-      wood: "Black Walnut",
+      title: "Olive Ash Lidded Bowl",
+      price: "£470",
+      wood: "Olive Ash",
       badge: "1 of 1",
-      image: "bg-gradient-to-br from-amber-800 to-amber-900"
+      image: "/lovable-uploads/af78b9da-40ed-47a5-86d8-1697982ac38b.png"
     },
     {
       id: 2,
@@ -57,9 +57,19 @@ const OneOffArt = () => {
               {artPieces.map((piece) => (
                 <Card key={piece.id} className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-nature-sage border-nature-moss/20 rounded-xl overflow-hidden">
                   <div className="relative">
-                    <div className={`${piece.image} h-64 flex items-center justify-center relative overflow-hidden`}>
-                      <div className="absolute inset-0 bg-black/20"></div>
-                      <span className="text-white/80 text-6xl font-playfair relative z-10">JM</span>
+                    <div className={`h-64 flex items-center justify-center relative overflow-hidden ${piece.image.startsWith('bg-') ? piece.image : 'bg-white'}`}>
+                      {piece.image.startsWith('/') ? (
+                        <img 
+                          src={piece.image} 
+                          alt={piece.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <>
+                          <div className="absolute inset-0 bg-black/20"></div>
+                          <span className="text-white/80 text-6xl font-playfair relative z-10">JM</span>
+                        </>
+                      )}
                       <Badge className="absolute top-4 left-4 bg-nature-forest text-nature-sage">
                         {piece.badge}
                       </Badge>
