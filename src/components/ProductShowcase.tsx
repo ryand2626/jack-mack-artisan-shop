@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -92,9 +91,6 @@ const ProductShowcase = () => {
                       <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
                         <Eye className="h-4 w-4" />
                       </Button>
-                      <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
-                        <Heart className="h-4 w-4" />
-                      </Button>
                       <Button size="sm" className="bg-nature-moss text-nature-sage">
                         <ShoppingCart className="h-4 w-4" />
                       </Button>
@@ -150,9 +146,6 @@ const ProductShowcase = () => {
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3">
                       <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
                         <Eye className="h-4 w-4" />
-                      </Button>
-                      <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
-                        <Heart className="h-4 w-4" />
                       </Button>
                       <Button size="sm" className="bg-nature-moss text-nature-sage">
                         <ShoppingCart className="h-4 w-4" />

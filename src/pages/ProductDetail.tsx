@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Heart, ShoppingCart, ArrowLeft } from 'lucide-react';
+import { ShoppingCart, ArrowLeft } from 'lucide-react';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -170,9 +170,6 @@ const ProductDetail = () => {
                 <Button className="flex-1 bg-nature-moss hover:bg-nature-forest text-nature-sage">
                   <ShoppingCart className="h-5 w-5 mr-2" />
                   Add to Cart
-                </Button>
-                <Button variant="outline" className="border-nature-moss text-nature-moss hover:bg-nature-moss hover:text-nature-sage">
-                  <Heart className="h-5 w-5" />
                 </Button>
               </div>
 
