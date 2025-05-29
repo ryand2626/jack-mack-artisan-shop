@@ -14,7 +14,7 @@ const OneOffArt = () => {
       price: "£470",
       wood: "Olive Ash",
       badge: "1 of 1",
-      image: "/lovable-uploads/374ef146-855d-4d32-a7e4-c48d054f4194.png"
+      image: "/lovable-uploads/ca6a59db-03d5-49fe-93a7-485a2bc2e00f.png"
     },
     {
       id: 2,
@@ -62,7 +62,7 @@ const OneOffArt = () => {
                         <img 
                           src={piece.image} 
                           alt={piece.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain p-4"
                         />
                       ) : (
                         <>
