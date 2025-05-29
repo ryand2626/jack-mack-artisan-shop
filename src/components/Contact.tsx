@@ -1,3 +1,4 @@
+
 import { Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -124,7 +125,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-nature-charcoal font-medium mb-2">
+                      <label htmlFor="name" className="block text-gray-600 font-medium mb-2">
                         Full Name
                       </label>
                       <Input
@@ -132,13 +133,13 @@ const Contact = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage"
+                        className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage text-gray-700"
                         placeholder="Your name"
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-nature-charcoal font-medium mb-2">
+                      <label htmlFor="email" className="block text-gray-600 font-medium mb-2">
                         Email Address
                       </label>
                       <Input
@@ -147,7 +148,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage"
+                        className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage text-gray-700"
                         placeholder="your.email@example.com"
                         required
                       />
@@ -155,7 +156,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-nature-charcoal font-medium mb-2">
+                    <label htmlFor="subject" className="block text-gray-600 font-medium mb-2">
                       Subject
                     </label>
                     <Input
@@ -163,14 +164,14 @@ const Contact = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage"
+                      className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage text-gray-700"
                       placeholder="What can we help you with?"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-nature-charcoal font-medium mb-2">
+                    <label htmlFor="message" className="block text-gray-600 font-medium mb-2">
                       Message
                     </label>
                     <Textarea
@@ -179,7 +180,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage resize-none"
+                      className="border-nature-moss/30 focus:border-nature-moss bg-nature-sage resize-none text-gray-700"
                       placeholder="Tell us about your project or ask us anything..."
                       required
                     />
