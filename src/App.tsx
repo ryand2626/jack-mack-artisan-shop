@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import OneOffArt from "./pages/OneOffArt";
+import ProductDetail from "./pages/ProductDetail";
 import Kitchenware from "./pages/Kitchenware";
 import FinishingProducts from "./pages/FinishingProducts";
 import Auth from "./pages/Auth";
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/one-off-art" element={<OneOffArt />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/kitchenware" element={<Kitchenware />} />
             <Route path="/finishing-products" element={<FinishingProducts />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

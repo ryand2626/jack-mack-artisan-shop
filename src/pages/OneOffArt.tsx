@@ -1,3 +1,5 @@
+
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -95,9 +97,11 @@ const OneOffArt = () => {
                     <p className="text-nature-charcoal/60 mb-3">{piece.wood}</p>
                     <div className="flex justify-between items-center">
                       <span className="text-2xl font-bold text-nature-moss">{piece.price}</span>
-                      <Button className="bg-nature-moss hover:bg-nature-forest text-nature-sage rounded-lg">
-                        View Details
-                      </Button>
+                      <Link to={`/product/${piece.id}`}>
+                        <Button className="bg-nature-moss hover:bg-nature-forest text-nature-sage rounded-lg">
+                          View Details
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
