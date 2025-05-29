@@ -1,8 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
-import { LogIn, LogOut, User } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LogOut, User } from 'lucide-react';
 
 const AuthButton = () => {
   const { user, signOut, loading } = useAuth();
@@ -34,17 +33,7 @@ const AuthButton = () => {
     );
   }
 
-  return (
-    <Link to="/auth">
-      <Button
-        size="sm"
-        className="bg-nature-moss hover:bg-nature-forest text-nature-sage"
-      >
-        <LogIn className="h-4 w-4 mr-1" />
-        Sign In
-      </Button>
-    </Link>
-  );
+  return null; // Don't show sign in button here anymore
 };
 
 export default AuthButton;

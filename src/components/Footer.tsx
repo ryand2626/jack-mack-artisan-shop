@@ -1,5 +1,6 @@
 
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -70,6 +71,7 @@ const Footer = () => {
               <a href="#" className="text-nature-sage/60 hover:text-nature-sage transition-colors">Privacy Policy</a>
               <a href="#" className="text-nature-sage/60 hover:text-nature-sage transition-colors">Terms of Service</a>
               <a href="#" className="text-nature-sage/60 hover:text-nature-sage transition-colors">Returns</a>
+              <Link to="/auth" className="text-nature-sage/60 hover:text-nature-sage transition-colors">Admin Sign In</Link>
             </div>
           </div>
         </div>
