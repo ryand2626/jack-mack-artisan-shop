@@ -25,14 +25,14 @@ const ProductDetail = () => {
     },
     {
       id: 2,
-      title: "Cherry Wood Vase",
-      price: "£240",
-      wood: "Wild Cherry",
+      title: "Pear Wood Burl Bowl",
+      price: "£480",
+      wood: "Pear Wood Burl",
       badge: "1 of 1",
-      image: "bg-gradient-to-br from-red-800 to-red-900",
-      description: "An elegant vase turned from wild cherry wood, featuring the wood's characteristic warm tones and smooth grain. This piece brings natural beauty to any space.",
-      dimensions: "12cm diameter x 20cm height",
-      finish: "Satin lacquer finish"
+      image: "/lovable-uploads/a5e75673-1dcf-492b-b253-772cc9469ef4.png",
+      description: "An extraordinary bowl turned from rare pear wood burl, showcasing the dramatic swirling grain patterns and rich honey tones unique to burled wood. This natural edge piece celebrates the tree's natural form while creating a functional work of art.",
+      dimensions: "25cm diameter x 12cm height",
+      finish: "Hand-rubbed natural oil finish"
     },
     {
       id: 3,

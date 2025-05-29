@@ -19,11 +19,11 @@ const OneOffArt = () => {
     },
     {
       id: 2,
-      title: "Cherry Wood Vase",
-      price: "£240",
-      wood: "Wild Cherry",
+      title: "Pear Wood Burl Bowl",
+      price: "£480",
+      wood: "Pear Wood Burl",
       badge: "1 of 1",
-      image: "bg-gradient-to-br from-red-800 to-red-900"
+      image: "/lovable-uploads/a5e75673-1dcf-492b-b253-772cc9469ef4.png"
     },
     {
       id: 3,
