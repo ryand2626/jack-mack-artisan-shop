@@ -23,10 +23,9 @@ const AuthButton = () => {
           <span className="text-sm font-medium">Welcome, Jack</span>
         </div>
         <Button
-          variant="outline"
           size="sm"
           onClick={signOut}
-          className="border-nature-moss text-nature-moss hover:bg-nature-moss hover:text-nature-sage"
+          className="bg-nature-moss hover:bg-nature-forest text-nature-sage"
         >
           <LogOut className="h-4 w-4 mr-1" />
           Sign Out
@@ -38,9 +37,8 @@ const AuthButton = () => {
   return (
     <Link to="/auth">
       <Button
-        variant="outline"
         size="sm"
-        className="border-nature-moss text-nature-moss hover:bg-nature-moss hover:text-nature-sage"
+        className="bg-nature-moss hover:bg-nature-forest text-nature-sage"
       >
         <LogIn className="h-4 w-4 mr-1" />
         Sign In
