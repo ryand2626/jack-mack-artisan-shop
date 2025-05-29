@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -19,9 +18,12 @@ const ProductDetail = () => {
       wood: "Olive Ash",
       badge: "1 of 1",
       image: "/lovable-uploads/ca6a59db-03d5-49fe-93a7-485a2bc2e00f.png",
-      description: "A stunning one-off piece crafted from beautiful olive ash wood. This lidded bowl showcases the natural grain patterns and rich colors that make each piece unique. Perfect for storing jewelry, small keepsakes, or simply as a decorative centerpiece.",
-      dimensions: "15cm diameter x 8cm height",
-      finish: "Hand-rubbed natural oil finish"
+      description: "A stunning one-off piece crafted from beautiful olive ash wood. This decorative lidded bowl showcases the natural grain patterns and rich colors that make each piece unique. Perfect for storing jewelry, small keepsakes, or simply as a decorative centerpiece.",
+      dimensions: "135mm x 110mm",
+      artist: "Jack Mack",
+      materials: "Olive Ash",
+      finishedPiece: "Decorative lidded bowl",
+      note: "This item was green turned. As a natural material, wood has the potential to change shape slightly depending on environmental conditions. It is unlikely to be noticeable to the eye but it's important to be aware that all wooden items can change shape and colour over time."
     },
     {
       id: 2,
@@ -129,11 +131,40 @@ const ProductDetail = () => {
                   <h4 className="font-semibold text-nature-forest mb-2">Dimensions</h4>
                   <p className="text-nature-charcoal/70">{product.dimensions}</p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-nature-forest mb-2">Finish</h4>
-                  <p className="text-nature-charcoal/70">{product.finish}</p>
-                </div>
+                {product.artist && (
+                  <div>
+                    <h4 className="font-semibold text-nature-forest mb-2">Artist</h4>
+                    <p className="text-nature-charcoal/70">{product.artist}</p>
+                  </div>
+                )}
+                {product.materials && (
+                  <div>
+                    <h4 className="font-semibold text-nature-forest mb-2">Materials</h4>
+                    <p className="text-nature-charcoal/70">{product.materials}</p>
+                  </div>
+                )}
+                {product.finishedPiece && (
+                  <div>
+                    <h4 className="font-semibold text-nature-forest mb-2">Finished Piece</h4>
+                    <p className="text-nature-charcoal/70">{product.finishedPiece}</p>
+                  </div>
+                )}
+                {product.finish && (
+                  <div>
+                    <h4 className="font-semibold text-nature-forest mb-2">Finish</h4>
+                    <p className="text-nature-charcoal/70">{product.finish}</p>
+                  </div>
+                )}
               </div>
+
+              {product.note && (
+                <div className="bg-nature-moss/10 rounded-lg p-6">
+                  <h4 className="font-semibold text-nature-forest mb-2">Please Note</h4>
+                  <p className="text-nature-charcoal/70 text-sm">
+                    {product.note}
+                  </p>
+                </div>
+              )}
 
               <div className="flex gap-4 pt-6">
                 <Button className="flex-1 bg-nature-moss hover:bg-nature-forest text-nature-sage">
@@ -145,13 +176,15 @@ const ProductDetail = () => {
                 </Button>
               </div>
 
-              <div className="bg-nature-moss/10 rounded-lg p-6 mt-8">
-                <h4 className="font-semibold text-nature-forest mb-2">Craftsmanship Promise</h4>
-                <p className="text-nature-charcoal/70 text-sm">
-                  Each piece is individually hand-crafted with care and attention to detail. 
-                  As a one-off artwork, this piece is completely unique and will never be replicated.
-                </p>
-              </div>
+              {!product.note && (
+                <div className="bg-nature-moss/10 rounded-lg p-6 mt-8">
+                  <h4 className="font-semibold text-nature-forest mb-2">Craftsmanship Promise</h4>
+                  <p className="text-nature-charcoal/70 text-sm">
+                    Each piece is individually hand-crafted with care and attention to detail. 
+                    As a one-off artwork, this piece is completely unique and will never be replicated.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
