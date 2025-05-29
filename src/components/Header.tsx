@@ -3,10 +3,12 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 import AuthButton from './AuthButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -15,6 +17,11 @@ const Header = () => {
     { name: 'Finishing Products', href: '/finishing-products' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  // Add admin link for logged-in users
+  if (user) {
+    navItems.splice(-1, 0, { name: 'Admin', href: '/admin' });
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-nature-sage/95 backdrop-blur-sm border-b border-nature-moss/20">

@@ -10,6 +10,7 @@ import OneOffArt from "./pages/OneOffArt";
 import Kitchenware from "./pages/Kitchenware";
 import FinishingProducts from "./pages/FinishingProducts";
 import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/one-off-art" element={<OneOffArt />} />
             <Route path="/kitchenware" element={<Kitchenware />} />
             <Route path="/finishing-products" element={<FinishingProducts />} />
