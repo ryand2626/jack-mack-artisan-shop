@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import AuthButton from './AuthButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,6 +52,7 @@ const Header = () => {
                 </Link>
               )
             ))}
+            <AuthButton />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -89,6 +91,9 @@ const Header = () => {
                   </Link>
                 )
               ))}
+              <div className="pt-2">
+                <AuthButton />
+              </div>
             </div>
           </nav>
         )}
