@@ -5,10 +5,12 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, ArrowLeft } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   // This would normally come from a database or API
   const allProducts = [
@@ -57,6 +59,14 @@ const ProductDetail = () => {
   ];
 
   const product = allProducts.find(p => p.id === parseInt(id || '1'));
+
+  const handleAddToCart = () => {
+    console.log('Adding to cart:', product?.title);
+    toast({
+      title: "Added to Cart",
+      description: `${product?.title} has been added to your cart.`,
+    });
+  };
 
   if (!product) {
     return (
@@ -156,12 +166,6 @@ const ProductDetail = () => {
                     <p className="text-nature-charcoal/70">{product.finishedPiece}</p>
                   </div>
                 )}
-                {product.finish && (
-                  <div>
-                    <h4 className="font-semibold text-nature-forest mb-2">Finish</h4>
-                    <p className="text-nature-charcoal/70">{product.finish}</p>
-                  </div>
-                )}
               </div>
 
               {product.note && (
@@ -174,7 +178,10 @@ const ProductDetail = () => {
               )}
 
               <div className="flex gap-4 pt-6">
-                <Button className="flex-1 bg-nature-moss hover:bg-nature-forest text-nature-sage">
+                <Button 
+                  onClick={handleAddToCart}
+                  className="flex-1 bg-nature-moss hover:bg-nature-forest text-nature-sage"
+                >
                   <ShoppingCart className="h-5 w-5 mr-2" />
                   Add to Cart
                 </Button>
