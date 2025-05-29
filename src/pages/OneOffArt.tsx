@@ -27,11 +27,11 @@ const OneOffArt = () => {
     },
     {
       id: 3,
-      title: "Oak Decorative Platter",
-      price: "£320",
-      wood: "English Oak",
+      title: "Purple Comets",
+      price: "£280",
+      wood: "Yew Wood",
       badge: "1 of 1",
-      image: "bg-gradient-to-br from-yellow-800 to-yellow-900"
+      image: "/lovable-uploads/72c710c9-e20a-44b0-a63e-69f70440b92b.png"
     }
   ];
 

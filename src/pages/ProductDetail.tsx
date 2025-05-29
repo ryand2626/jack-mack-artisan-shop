@@ -36,14 +36,14 @@ const ProductDetail = () => {
     },
     {
       id: 3,
-      title: "Oak Decorative Platter",
-      price: "£320",
-      wood: "English Oak",
+      title: "Purple Comets",
+      price: "£280",
+      wood: "Yew Wood",
       badge: "1 of 1",
-      image: "bg-gradient-to-br from-yellow-800 to-yellow-900",
-      description: "A large decorative platter crafted from English oak, perfect for serving or display. The natural grain patterns tell the story of this magnificent tree.",
-      dimensions: "35cm diameter x 3cm thickness",
-      finish: "Food-safe mineral oil finish"
+      image: "/lovable-uploads/72c710c9-e20a-44b0-a63e-69f70440b92b.png",
+      description: "A striking natural edge vessel turned from yew wood, featuring the distinctive purple heartwood streaks that give this piece its name. The dramatic coloration and natural defects create a cosmic appearance reminiscent of shooting stars.",
+      dimensions: "20cm diameter x 15cm height",
+      finish: "Natural wax finish"
     }
   ];
 
