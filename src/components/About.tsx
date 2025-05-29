@@ -7,7 +7,7 @@ const About = () => {
     {
       icon: <Hammer className="h-8 w-8" />,
       title: "Master Craftsmanship",
-      description: "Over 15 years of woodturning expertise, creating pieces that last generations."
+      description: "Over 20 years of woodturning expertise, creating pieces that last generations."
     },
     {
       icon: <Leaf className="h-8 w-8" />,
@@ -57,11 +57,11 @@ const About = () => {
             {/* Floating Stats */}
             <div className="absolute -bottom-6 -right-6 grid grid-cols-2 gap-4">
               <div className="bg-nature-forest text-nature-sage p-4 rounded-xl shadow-lg text-center">
-                <div className="text-2xl font-bold">15+</div>
+                <div className="text-2xl font-bold">20+</div>
                 <div className="text-sm">Years</div>
               </div>
               <div className="bg-nature-moss text-nature-sage p-4 rounded-xl shadow-lg text-center">
-                <div className="text-2xl font-bold">500+</div>
+                <div className="text-2xl font-bold">5000+</div>
                 <div className="text-sm">Pieces</div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-nature-charcoal/80 mb-8 leading-relaxed">
-              Jack Mack discovered his passion for woodturning over fifteen years ago in a small workshop 
+              Jack Mack discovered his passion for woodturning over twenty years ago in a small workshop 
               tucked away in the countryside. What started as a weekend hobby quickly became a calling, 
               as Jack found himself drawn to the meditative rhythm of the lathe and the endless possibilities 
               hidden within each piece of wood.
