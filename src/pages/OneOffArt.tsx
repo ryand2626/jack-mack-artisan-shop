@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -62,7 +61,7 @@ const OneOffArt = () => {
                         <img 
                           src={piece.image} 
                           alt={piece.title}
-                          className="w-full h-full object-contain p-4"
+                          className="w-full h-full object-cover"
                         />
                       ) : (
                         <>
