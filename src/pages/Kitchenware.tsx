@@ -105,8 +105,7 @@ const Kitchenware = () => {
                           <img
                             src={item.image_url}
                             alt={item.title}
-                            className="w-full h-full object-cover transform translate-y-[-25%] scale-110"
-                            style={{ objectPosition: 'center 25%' }}
+                            className="w-full h-full object-cover"
                           />
                         ) : (
                           <>
