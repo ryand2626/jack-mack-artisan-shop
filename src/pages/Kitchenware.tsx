@@ -100,7 +100,7 @@ const Kitchenware = () => {
                 {kitchenware.map((item) => (
                   <Card key={item.id} className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-nature-sage border-nature-moss/20 rounded-xl overflow-hidden">
                     <div className="relative">
-                      <div className="h-48 md:h-64 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-amber-700 to-amber-800">
+                      <div className="aspect-square flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-amber-700 to-amber-800">
                         {item.image_url ? (
                           <img
                             src={item.image_url}
