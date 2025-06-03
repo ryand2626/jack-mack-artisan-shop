@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -9,11 +8,13 @@ import { Badge } from '@/components/ui/badge';
 import { Eye, ShoppingCart } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { useCart } from '@/contexts/CartContext';
 
 const OneOffArt = () => {
   const [artPieces, setArtPieces] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
+  const { addToCart } = useCart();
 
   const fetchProducts = async () => {
     try {
@@ -36,6 +37,14 @@ const OneOffArt = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleAddToCart = (piece: any) => {
+    addToCart(piece);
+    toast({
+      title: "Added to Cart",
+      description: `${piece.title} has been added to your cart.`,
+    });
   };
 
   useEffect(() => {
@@ -94,10 +103,16 @@ const OneOffArt = () => {
                         
                         {/* Hover Actions - Hidden on mobile */}
                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center space-x-3">
-                          <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
-                            <Eye className="h-4 w-4" />
-                          </Button>
-                          <Button size="sm" className="bg-nature-moss text-nature-sage">
+                          <Link to={`/product/${piece.id}`}>
+                            <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
+                              <Eye className="h-4 w-4" />
+                            </Button>
+                          </Link>
+                          <Button 
+                            size="sm" 
+                            className="bg-nature-moss text-nature-sage"
+                            onClick={() => handleAddToCart(piece)}
+                          >
                             <ShoppingCart className="h-4 w-4" />
                           </Button>
                         </div>

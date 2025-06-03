@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
@@ -9,10 +8,12 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Eye, ShoppingCart, Image } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { useCart } from '@/contexts/CartContext';
 
 const Kitchenware = () => {
   const [kitchenware, setKitchenware] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart();
 
   const fetchKitchenware = async () => {
     try {
@@ -64,6 +65,14 @@ const Kitchenware = () => {
       default:
         return status;
     }
+  };
+
+  const handleAddToCart = (item: any) => {
+    addToCart(item);
+    toast({
+      title: "Added to Cart",
+      description: `${item.title} has been added to your cart.`,
+    });
   };
 
   return (
@@ -120,10 +129,17 @@ const Kitchenware = () => {
                         
                         {/* Hover Actions */}
                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3">
-                          <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
-                            <Eye className="h-4 w-4" />
-                          </Button>
-                          <Button size="sm" className="bg-nature-moss text-nature-sage">
+                          <Link to={`/product/${item.id}`}>
+                            <Button size="sm" variant="secondary" className="bg-nature-sage text-nature-charcoal">
+                              <Eye className="h-4 w-4" />
+                            </Button>
+                          </Link>
+                          <Button 
+                            size="sm" 
+                            className="bg-nature-moss text-nature-sage"
+                            onClick={() => handleAddToCart(item)}
+                            disabled={item.stock_status === 'sold'}
+                          >
                             <ShoppingCart className="h-4 w-4" />
                           </Button>
                         </div>

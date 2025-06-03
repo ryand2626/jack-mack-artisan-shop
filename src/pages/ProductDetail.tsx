@@ -8,11 +8,13 @@ import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { useCart } from '@/contexts/CartContext';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { addToCart } = useCart();
   const [product, setProduct] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -45,7 +47,7 @@ const ProductDetail = () => {
   }, [id]);
 
   const handleAddToCart = () => {
-    console.log('Adding to cart:', product?.title);
+    addToCart(product);
     toast({
       title: "Added to Cart",
       description: `${product?.title} has been added to your cart.`,
@@ -169,9 +171,10 @@ const ProductDetail = () => {
                 <Button 
                   onClick={handleAddToCart}
                   className="flex-1 bg-nature-moss hover:bg-nature-forest text-nature-sage text-sm md:text-base py-3"
+                  disabled={product.stock_status === 'sold'}
                 >
                   <ShoppingCart className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-                  Add to Cart
+                  {product.stock_status === 'sold' ? 'Sold Out' : 'Add to Cart'}
                 </Button>
               </div>
             </div>

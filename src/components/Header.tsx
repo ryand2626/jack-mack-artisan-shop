@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import AuthButton from './AuthButton';
+import CartIcon from './CartIcon';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,18 +59,22 @@ const Header = () => {
                 </Link>
               )
             ))}
+            <CartIcon />
             <AuthButton />
           </nav>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden text-nature-charcoal hover:text-nature-moss p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          <div className="lg:hidden flex items-center space-x-2">
+            <CartIcon />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-nature-charcoal hover:text-nature-moss p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
