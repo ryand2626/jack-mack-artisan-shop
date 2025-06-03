@@ -15,12 +15,11 @@ const Header = () => {
     { name: 'One-Off Art', href: '/one-off-art' },
     { name: 'Kitchenware', href: '/kitchenware' },
     { name: 'Finishing Products', href: '/finishing-products' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   // Add admin link for logged-in users
   if (user) {
-    navItems.splice(-1, 0, { name: 'Admin', href: '/admin' });
+    navItems.push({ name: 'Admin', href: '/admin' });
   }
 
   return (
