@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -143,9 +144,11 @@ const Kitchenware = () => {
                         {item.price && (
                           <span className="text-xl md:text-2xl font-bold text-nature-moss">£{item.price}</span>
                         )}
-                        <Button className="bg-nature-moss hover:bg-nature-forest text-nature-sage rounded-lg w-full sm:w-auto text-sm md:text-base px-3 md:px-4 py-2">
-                          Add to Cart
-                        </Button>
+                        <Link to={`/product/${item.id}`}>
+                          <Button className="bg-nature-moss hover:bg-nature-forest text-nature-sage rounded-lg w-full sm:w-auto text-sm md:text-base px-3 md:px-4 py-2">
+                            View Details
+                          </Button>
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
