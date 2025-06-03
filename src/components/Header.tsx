@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-nature-sage/95 backdrop-blur-sm border-b border-nature-moss/20">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -33,19 +33,19 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/8509c152-cdb4-4f26-856a-dafd7addca55.png" 
                 alt="Jack Mack Woodturning" 
-                className="h-20 w-auto"
+                className="h-16 md:h-20 w-auto"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               item.href.startsWith('#') ? (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium"
+                  className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium text-sm xl:text-base"
                 >
                   {item.name}
                 </a>
@@ -53,7 +53,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium"
+                  className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium text-sm xl:text-base"
                 >
                   {item.name}
                 </Link>
@@ -66,7 +66,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-nature-charcoal hover:text-nature-moss"
+            className="lg:hidden text-nature-charcoal hover:text-nature-moss p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,14 +75,14 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-nature-moss/20 pt-4">
-            <div className="flex flex-col space-y-3">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-nature-moss/20 pt-4">
+            <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 item.href.startsWith('#') ? (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium"
+                    className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium text-lg py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -91,7 +91,7 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium"
+                    className="text-nature-charcoal hover:text-nature-moss transition-colors duration-200 font-medium text-lg py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
