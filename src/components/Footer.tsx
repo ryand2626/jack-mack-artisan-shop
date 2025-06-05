@@ -1,6 +1,6 @@
-
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import footerLogoImage from '/lovable-uploads/695ffc1a-cc81-412f-9df5-d02cd08750d3.png';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-4 md:mb-6">
               <img 
-                src="/lovable-uploads/695ffc1a-cc81-412f-9df5-d02cd08750d3.png" 
+                src={footerLogoImage} 
                 alt="Jack Mack Woodturning" 
                 className="h-12 md:h-16 w-auto brightness-0 invert"
               />

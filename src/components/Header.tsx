@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import AuthButton from './AuthButton';
 import CartIcon from './CartIcon';
+import logoImage from '/lovable-uploads/8509c152-cdb4-4f26-856a-dafd7addca55.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <Link to="/">
               <img 
-                src="/lovable-uploads/8509c152-cdb4-4f26-856a-dafd7addca55.png" 
+                src={logoImage} 
                 alt="Jack Mack Woodturning" 
                 className="h-16 md:h-20 w-auto"
               />
